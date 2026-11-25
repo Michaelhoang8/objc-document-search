@@ -1,0 +1,12 @@
+name: Native validation
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v6
+      - run: clang -fobjc-arc -Wall -Wextra -framework Foundation main.m -o document-search
+      - run: ./document-search --test
+      - run: ./document-search fixtures/documents.json 'pipeline data'

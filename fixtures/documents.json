@@ -1,0 +1,5 @@
+[
+  {"id":"pipeline","text":"Pipeline capacity and daily natural gas throughput"},
+  {"id":"incidents","text":"Reported pipeline incidents and source data quality"},
+  {"id":"inventory","text":"Inventory movements and warehouse reconciliation"}
+]
